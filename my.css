@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Zilla Slab', serif;
+}
+
+.container-fluid{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: gray;
+}
+
+nav::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav{
+    width: 700px;
+    height: 400px;
+    background-color: red;
+    margin: auto;
+}
+
+
+ .header-box { 
+    
+    padding: 0; 
+    list-style: none; 
+    display: table;
+    width: 700px;
+    text-align: center;
+    background-color: rebeccapurple;
+    display: flex;
+    justify-content: space-between;
+  }
+  li { 
+    display: table-cell; 
+    position: relative; 
+    
+  }
+  a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    
+    position: relative;
+  }
+  a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+ 
+.btn{
+    background-color: blue;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+.btn a{
+    color: cornsilk;
+    text-decoration: none;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+}
+
+nav .header-box li a{
+    color: white;
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+nav .header-box li:hover > .services{
+    top: 90px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+nav .header-box li a:hover{
+    color: blue;
+    
+}
+
+
+
+nav .header-box .services{
+    position: absolute;
+    top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+     
+}
+ nav .header-box .services li{
+    background-color: rgb(236, 41, 41);
+    position: relative;
+    margin: 0px;
+    width: 200px;
+    
+} 
+
+
+
+
+.mega-menu{
+    position: absolute;
+    
+    left: 0;
+    
+    display: flex;
+    flex-direction: row;
+    
+    background-color: black;
+    padding: 20px;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+
+
+}
+.inner-mega-menu{
+    width:320px ;
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 1%;
+}
+.inner-mega-menu a{
+    line-height: 30px;
+    
+}
+.inner-mega-menu:last-child{
+    margin: 0%;
+}
+.inner-mega-menu a{
+    padding: 0px 40px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    color: white ;
+
+}
+nav .header-box li:hover .mega-menu{
+  visibility: visible;
+  opacity: 1;
+}
+   
+
+@media screen and (max-height: 300px) {
+    ul {
+        margin-top: 40px;
+    }
+}
